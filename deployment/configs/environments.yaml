@@ -1,0 +1,59 @@
+# A2 Robot - Deployment Environment Configuration
+# Defines target environments and their specific configurations
+
+environments:
+  development:
+    description: "Local development environment with hardware mocks"
+    components:
+      - ros-workspace
+      - stt-service
+      - control-interface
+    hardware_mocks: true
+    cloud_services: false
+    
+  raspberry-pi:
+    description: "Production Raspberry Pi 5 deployment"
+    target_host: "a2-pi.local"
+    target_user: "pi"
+    components:
+      - ros-workspace
+      - pi-system
+    hardware_mocks: false
+    ros_domain_id: 42
+    
+  rtx-system:
+    description: "RTX 4080 local compute system"
+    components:
+      - stt-service
+      - control-interface
+    gpu_required: true
+    cuda_version: "12.0"
+    
+  teensy:
+    description: "Teensy 4.1 microcontroller"
+    target_port: "/dev/ttyACM0"
+    components:
+      - teensy-firmware
+    board: "teensy41"
+    
+  cloud:
+    description: "RunPod cloud deployment"
+    provider: "runpod"
+    components:
+      - llm-containers
+    gpu_type: "RTX 4090"
+    min_gpu_memory: "24GB"
+
+# Deployment matrix - which components deploy to which environments
+deployment_matrix:
+  - environment: raspberry-pi
+    components: [ros-workspace, pi-system]
+    
+  - environment: rtx-system  
+    components: [stt-service, control-interface]
+    
+  - environment: teensy
+    components: [teensy-firmware]
+    
+  - environment: cloud
+    components: [llm-containers]

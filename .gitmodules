@@ -31,7 +31,3 @@
 	url = https://github.com/War-Against-Work/a2-llm-containers.git
 	branch = main
 
-[submodule "control-interface"]
-	path = control-interface
-	url = https://github.com/War-Against-Work/a2-control-interface.git
-	branch = main

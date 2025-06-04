@@ -1,0 +1,338 @@
+# A2 Robot Project - Root .gitignore
+# Generated: 2025-01-27
+# Covers: Python, C++, ROS2, Node.js, Arduino, Docker, AI/ML
+
+# =============================================================================
+# System Files
+# =============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# =============================================================================
+# Python
+# =============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# =============================================================================
+# C/C++ (Arduino, Teensy, ROS)
+# =============================================================================
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# =============================================================================
+# ROS2 Specific
+# =============================================================================
+build/
+install/
+log/
+.colcon_cache/
+*.launch
+colcon_cd
+
+# =============================================================================
+# Arduino/PlatformIO/Teensy
+# =============================================================================
+.pio/
+.pioenvs/
+.piolibdeps/
+.clang_complete
+.gcc-flags.json
+.pio
+lib_deps/
+
+# Arduino IDE
+*.ino.eep
+*.ino.elf
+*.ino.hex
+
+# =============================================================================
+# Node.js/JavaScript
+# =============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# =============================================================================
+# Docker
+# =============================================================================
+# Don't ignore Dockerfiles, but ignore build contexts
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# =============================================================================
+# AI/ML Models and Data
+# =============================================================================
+# Large model files
+*.bin
+*.onnx
+*.h5
+*.pb
+*.tflite
+*.pth
+*.pt
+*.safetensors
+
+# Training data and checkpoints
+checkpoints/
+models/
+*.model
+logs/
+tensorboard/
+wandb/
+
+# Datasets
+datasets/
+data/
+*.csv
+*.json
+*.parquet
+*.hdf5
+
+# Cache directories
+.transformers_cache/
+.cache/
+.huggingface/
+
+# =============================================================================
+# Development Tools
+# =============================================================================
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains IDEs
+.idea/
+*.swp
+*.swo
+*~
+
+# Vim
+*.swp
+*.swo
+*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =============================================================================
+# Cloud and Deployment
+# =============================================================================
+# RunPod
+runpod_logs/
+*.runpod
+
+# SSH keys
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Secrets
+secrets/
+*.secret
+config.yaml
+credentials.json
+
+# =============================================================================
+# A2 Project Specific
+# =============================================================================
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Backup files
+backup/
+*.backup
+*.bak
+*-backup-*
+
+# Log files
+*.log
+logs/
+
+# Generated documentation
+docs/build/
+
+# Test outputs
+test_outputs/
+test_results/
+
+# RunPod endpoints cache
+runpod_cache/
+
+# Audio test files (large)
+*.wav
+*.mp3
+*.flac
+test_audio/
+
+# Video test files
+*.mp4
+*.avi
+*.mov
+
+# Build artifacts
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Package files
+*.deb
+*.rpm
+*.pkg
+
+# Compressed archives (except documentation backups marked as important)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+!docs-backup-*.tar.gz 
