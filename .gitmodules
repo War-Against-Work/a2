@@ -1,0 +1,37 @@
+# A2 Robot Project - Git Submodules Configuration
+# Each component is maintained in its own repository for independent deployment
+
+[submodule "docs"]
+	path = docs
+	url = https://github.com/War-Against-Work/a2-docs.git
+	branch = main
+
+[submodule "ros-workspace"]
+	path = ros-workspace
+	url = https://github.com/War-Against-Work/a2-ros-ws.git
+	branch = main
+
+[submodule "stt-service"]
+	path = stt-service
+	url = https://github.com/War-Against-Work/a2-stt.git
+	branch = main
+
+[submodule "pi-system"]
+	path = pi-system
+	url = https://github.com/War-Against-Work/a2-pi-system.git
+	branch = main
+
+[submodule "teensy-firmware"]
+	path = teensy-firmware
+	url = https://github.com/War-Against-Work/a2-teensy-firmware.git
+	branch = main
+
+[submodule "llm-containers"]
+	path = llm-containers
+	url = https://github.com/War-Against-Work/a2-llm-containers.git
+	branch = main
+
+[submodule "control-interface"]
+	path = control-interface
+	url = https://github.com/War-Against-Work/a2-control-interface.git
+	branch = main
