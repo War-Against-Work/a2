@@ -1,7 +1,7 @@
 # A2 Robot Project - Documentation Inventory Report
 
-**Generated:** 2025-05-28 10:09:34  
-**Base Path:** /home/waragainstwork/A2  
+**Generated:** 2025-05-28 10:09:34
+**Base Path:** /home/waragainstwork/A2
 
 ## Summary
 

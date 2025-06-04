@@ -8,7 +8,7 @@ This directory contains deprecated documentation that has been superseded by cur
 Documentation deprecated in May 2025 during the documentation cleanup process:
 
 - **single-camera-approach/**: Reserved for any future documents describing Arducam ToF-centric designs (none found in current codebase)
-- **old-sensor-configs/**: Reserved for previous sensor mounting and wiring approaches (none found in current codebase)  
+- **old-sensor-configs/**: Reserved for previous sensor mounting and wiring approaches (none found in current codebase)
 - **superseded-implementations/**: Reserved for outdated implementation strategies (none found in current codebase)
 - **process-documents/**: Documentation cleanup process files that are no longer needed for active development
 
@@ -34,11 +34,11 @@ Documents are archived when they:
 
 For active project documentation, see:
 - `../master-document.md` - Main project overview
-- `../DOCUMENTATION_INDEX.md` - Complete document catalog  
+- `../DOCUMENTATION_INDEX.md` - Complete document catalog
 - `../MIGRATION_CHECKLIST.md` - Ongoing migration tasks
 - `../scripts/` - Validation and maintenance tools
 
 ---
-**Archive Created**: 2025-05-27  
-**Last Updated**: 2025-05-27  
-**Maintained By**: Documentation cleanup process 
+**Archive Created**: 2025-05-27
+**Last Updated**: 2025-05-27
+**Maintained By**: Documentation cleanup process

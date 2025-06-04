@@ -9,10 +9,10 @@ A monorepo containing all components of the A2 expressive humanoid robot system,
 This monorepo orchestrates the following components as submodules:
 
 ```
-A2/                          # Main orchestrator repository  
+A2/                          # Main orchestrator repository
 ├── docs/                    # Documentation submodule → a2-docs
 ├── ros-workspace/           # ROS2 workspace → a2-ros-ws
-├── stt-service/            # Speech-to-text service → a2-stt  
+├── stt-service/            # Speech-to-text service → a2-stt
 ├── pi-system/              # Raspberry Pi system services → a2-pi-system
 ├── teensy-firmware/        # Teensy 4.1 firmware → a2-teensy-firmware
 ├── llm-containers/         # LLM containers for cloud → a2-llm-containers
@@ -27,7 +27,7 @@ A2/                          # Main orchestrator repository
 
 A2 is a robotic head/neck assembly that can:
 - 🎤 Understand speech and respond naturally
-- 👀 Track faces and objects with expressive movements  
+- 👀 Track faces and objects with expressive movements
 - 🤖 Display emotions through biomimetic motion primitives
 - 💬 Generate contextual responses using cloud AI
 - ⚡ React reflexively to environmental stimuli

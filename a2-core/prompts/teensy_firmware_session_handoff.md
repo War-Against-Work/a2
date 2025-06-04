@@ -10,7 +10,7 @@
 
 **Current Environment:**
 - **Platform**: WSL (Windows Subsystem for Linux)
-- **Working Directory**: `~/A2/` 
+- **Working Directory**: `~/A2/`
 - **Available Repositories**:
   - `a2-core/` - Core development tools and prompts
   - `a2-docs/` - Complete documentation (just finished)
@@ -37,7 +37,7 @@
 2. **FreeRTOS Task Implementation**
    - Implement basic task stubs in `src/main.cpp`:
      - `safetyMonitorTask`
-     - `actuatorFeedbackTask` 
+     - `actuatorFeedbackTask`
      - `imuProcessingTask`
      - `serialCommunicationTask`
      - `heartbeatTask`
@@ -77,7 +77,7 @@
 ~/A2/a2-teensy-firmware/
 ├── platformio.ini                 # Create/modify
 ├── src/
-│   ├── main.cpp                  # Create/modify  
+│   ├── main.cpp                  # Create/modify
 │   ├── serial_comms.h            # Create
 │   ├── serial_comms.cpp          # Create
 │   └── config.h                  # Create (optional, good practice)
@@ -156,7 +156,7 @@ By the end of this session, you should have:
 
 **Immediate Task**: Follow the detailed task description above to implement foundational Teensy firmware with FreeRTOS, UART communication, and basic task structure.
 
-**Approach**: 
+**Approach**:
 - Reference the comprehensive documentation in `~/A2/a2-docs/`
 - Follow local-first development principles
 - Implement clean, well-structured C++ code with proper error handling

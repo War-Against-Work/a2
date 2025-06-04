@@ -40,7 +40,7 @@ Old scripts kept for reference.
 
 ## Naming Conventions
 
-1. **Use descriptive names**: 
+1. **Use descriptive names**:
    - ✅ `validate_documentation.py`
    - ❌ `test.py`
 
