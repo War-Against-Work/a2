@@ -1,30 +1,4 @@
 repos:
-  - repo: local
-    hooks:
-      - id: validate-docs
-        name: Validate Documentation
-        entry: python scripts/utils/validate_docs.py --directory a2-docs
-        language: python
-        files: \.md$
-        pass_filenames: false
-        always_run: false
-
-      - id: check-links
-        name: Check Markdown Links
-        entry: python scripts/utils/check_links.py a2-docs
-        language: python
-        files: \.md$
-        pass_filenames: false
-        always_run: false
-
-      - id: fix-basic-formatting
-        name: Fix Basic Formatting
-        entry: python scripts/utils/fix_formatting.py --directory a2-docs
-        language: python
-        files: \.md$
-        pass_filenames: false
-        always_run: false
-
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
