@@ -10,16 +10,23 @@ This monorepo orchestrates the following components as submodules:
 
 ```
 A2/                          # Main orchestrator repository
+├── a2-core/                 # Core documentation and prompts
+│   ├── prompts/             # AI assistant prompts
+│   └── continue_session.sh  # Session continuation script
+├── archive/                 # Deprecated documentation archive
 ├── docs/                    # Documentation submodule → a2-docs
 ├── ros-workspace/           # ROS2 workspace → a2-ros-ws
 ├── stt-service/            # Speech-to-text service → a2-stt
 ├── pi-system/              # Raspberry Pi system services → a2-pi-system
 ├── teensy-firmware/        # Teensy 4.1 firmware → a2-teensy-firmware
 ├── llm-containers/         # LLM containers for cloud → a2-llm-containers
-├── control-interface/      # Control interface → a2-control-interface
 ├── deployment/             # Deployment scripts and configs
 │   ├── configs/           # Deployment configurations
 │   └── scripts/           # Deployment automation scripts
+├── scripts/                # Documentation management tools
+├── DOCUMENTATION_INDEX.md  # Auto-generated documentation index
+├── .pre-commit-config.yaml # Pre-commit hooks configuration
+├── .vscode/               # VSCode settings
 └── README.md              # This file
 ```
 
@@ -41,9 +48,8 @@ A2 is a robotic head/neck assembly that can:
    - System services for robot control
    - Local sensor processing and motor control
 
-2. **RTX 4080 Local System** (`stt-service/`, `control-interface/`)
+2. **RTX 4080 Local System** (`stt-service/`)
    - High-performance speech-to-text processing
-   - Control interface and monitoring dashboard
    - Local GPU compute for real-time processing
 
 3. **Teensy 4.1 Microcontroller** (`teensy-firmware/`)
@@ -89,6 +95,8 @@ cd A2
 git submodule update --init --recursive
 ```
 
+**Note:** Most submodules may only show `.git` files until fully initialized. Use the recursive update command above to fetch all submodule content.
+
 ### Component-Specific Setup
 
 Each submodule has its own setup instructions:
@@ -99,7 +107,6 @@ Each submodule has its own setup instructions:
 - **Pi System**: See `pi-system/README.md`
 - **Teensy Firmware**: See `teensy-firmware/README.md`
 - **LLM Containers**: See `llm-containers/README.md`
-- **Control Interface**: See `control-interface/README.md`
 
 ### Deployment
 
@@ -146,6 +153,21 @@ Each component can be developed independently:
 3. Commit and push to the component repository
 4. Update the main monorepo to reference new commits
 
+### Documentation Management
+
+The `scripts/` directory contains tools for maintaining documentation:
+
+```bash
+# Update documentation index
+python scripts/update_doc_index.py
+
+# Validate all documents
+python scripts/validate_docs.py
+
+# Check cross-references
+python scripts/check_links.py
+```
+
 ## Key Documentation
 
 Once submodules are set up, documentation will be available at:
@@ -154,6 +176,7 @@ Once submodules are set up, documentation will be available at:
 1. 📋 [docs/reports/ROADMAP.md](docs/reports/ROADMAP.md) - 8-week implementation plan
 2. 🏗️ [docs/architecture/ARCHITECTURE.md](docs/architecture/ARCHITECTURE.md) - System design overview
 3. 📚 [docs/DOCUMENTATION-INDEX.md](docs/DOCUMENTATION-INDEX.md) - All docs organized
+4. 📊 [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md) - Auto-generated doc health report
 
 **Hardware Setup:**
 - [docs/hardware/bill-of-materials.md](docs/hardware/bill-of-materials.md) - Parts list
@@ -207,9 +230,10 @@ For detailed contribution guidelines, see individual component repositories.
 
 ## Support
 
-- Documentation: `docs/`
+- Documentation: `docs/` and `DOCUMENTATION_INDEX.md`
 - Issues: Component-specific GitHub issues
 - Architecture Questions: See `docs/architecture/`
+- Core Prompts: See `a2-core/prompts/`
 
 ## License
 
