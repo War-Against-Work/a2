@@ -31,3 +31,6 @@
 	url = https://github.com/War-Against-Work/a2-llm-containers.git
 	branch = main
 
+[submodule "a2-agents"]
+	path = a2-agents
+	url = https://github.com/War-Against-Work/A2-agents
