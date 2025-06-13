@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python*)",
+      "Bash(ros2*)",
+      "Bash(catkin*)",
+      "Bash(platformio*)",
+      "Bash(docker*)",
+      "Bash(git*)",
+      "Bash(npm*)",
+      "Read(/Users/aaronlax/Projects/A2/*)"
+    ]
+  },
+  "env": {
+    "A2_PROJECT_ROOT": "/Users/aaronlax/Projects/A2"
+  }
+}

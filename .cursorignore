@@ -1,1 +1,6 @@
+# Cursor ignore patterns
+.A2-agents/
+
+# Include environment files (override default ignore)
 !.env*
+!.*
